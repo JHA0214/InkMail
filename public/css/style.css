@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #fff;
+  color: #000;
+  font-family: -apple-system, "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+/* ---------- 메일함 목록 ---------- */
+
+.list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 2px solid #000;
+}
+
+.list-header h1 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.mail-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mail-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 16px;
+  border-bottom: 1px solid #666;
+  background: none;
+  font-size: 1rem;
+  color: #000;
+  cursor: pointer;
+}
+
+.mail-item.unread .mail-subject {
+  font-weight: 700;
+}
+
+.mail-item .mail-subject {
+  display: block;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.mail-item .mail-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.pager {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 20px;
+}
+
+.pager button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: 2px solid #000;
+  background: #fff;
+  color: #000;
+}
+
+.pager button:disabled {
+  border-color: #999;
+  color: #999;
+}
+
+.status {
+  padding: 24px;
+  text-align: center;
+  color: #333;
+}
+
+.list-header .logout {
+  border: 1px solid #000;
+  background: #fff;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+/* ---------- 로그인 ---------- */
+
+.login-wrap {
+  max-width: 320px;
+  margin: 20vh auto 0;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.login-wrap h1 {
+  margin-bottom: 24px;
+}
+
+.login-wrap form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-wrap input {
+  font-size: 1rem;
+  padding: 12px;
+  border: 2px solid #000;
+}
+
+.login-wrap button {
+  font-size: 1rem;
+  padding: 12px;
+  border: 2px solid #000;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ---------- 이미지 보기 버튼 ---------- */
+
+.reader-header .show-images {
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  padding: 6px 10px;
+  border: 1px solid #000;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* ---------- 페이지 넘김 리더 ---------- */
+
+.reader-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border-bottom: 2px solid #000;
+  background: #fff;
+  z-index: 10;
+}
+
+.reader-header .back {
+  border: none;
+  background: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.reader-header .subject {
+  flex: 1;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.reader-viewport {
+  position: fixed;
+  top: 52px;
+  bottom: 56px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.reader-pages {
+  height: 100%;
+  column-width: 100vw;
+  column-gap: 0;
+  column-fill: auto;
+  padding: 20px 24px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  transition: transform 0.25s ease;
+}
+
+.reader-pages img {
+  max-width: 100%;
+}
+
+.reader-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  border-top: 2px solid #000;
+  background: #fff;
+}
+
+.reader-nav button {
+  font-size: 1.2rem;
+  padding: 10px 24px;
+  border: 2px solid #000;
+  background: #fff;
+  color: #000;
+}
+
+.reader-nav button:disabled {
+  border-color: #999;
+  color: #999;
+}
+
+.page-indicator {
+  font-size: 0.95rem;
+}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>InkMail</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="reader-header">
+    <button class="back" id="back-btn" aria-label="뒤로가기">←</button>
+    <span class="subject" id="subject">불러오는 중...</span>
+    <button class="show-images" id="show-images" hidden>이미지 보기</button>
+  </header>
+
+  <div class="reader-viewport">
+    <div class="reader-pages" id="pages"></div>
+  </div>
+
+  <nav class="reader-nav">
+    <button id="prev-page">◀ 이전</button>
+    <span class="page-indicator" id="page-indicator"></span>
+    <button id="next-page">다음 ▶</button>
+  </nav>
+
+  <script src="js/reader.js"></script>
+</body>
+</html>
